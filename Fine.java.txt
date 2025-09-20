@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Fine{
+public static void main(String[] args){
+int bookID,dueDate, returnDate,days,fineRate,charge=0;
+Scanner input=new Scanner (System.in);
+System.out.println("Enter bookID:");
+bookID=input.nextInt();
+System.out.println("Enter dueDate:");
+dueDate=input.nextInt();
+System.out.println("Enter returnDate:");
+returnDate=input.nextInt();
+days=returnDate - dueDate;
+   if(days==0){
+   	charge=0;
+   }
+   else if (days<=7){
+   	charge=20;
+   }
+   else if(days>=8&&days<=14){
+   	charge=50;
+   }
+   else if(days>=15){
+   	charge=100;
+   }
+fineRate= charge*days;
+System.out.println("bookID:"+bookID);
+System.out.println("dueDate:"+dueDate);
+System.out.println("returnDate:"+returnDate);
+System.out.println("fineRate:"+fineRate);
+input.close();
+}
+}
