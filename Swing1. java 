@@ -1,0 +1,99 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class SwingExercise extends JFrame {
+
+    public SwingExercise() {
+
+        // Frame settings
+        setTitle("Java Swing Exercise");
+        setSize(700, 500);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        /* ================= MENU BAR ================= */
+        JMenuBar menuBar = new JMenuBar();
+        JMenu fileMenu = new JMenu("File");
+
+        JMenuItem newItem = new JMenuItem("New");
+        JMenuItem openItem = new JMenuItem("Open");
+        JMenuItem exitItem = new JMenuItem("Exit");
+
+        exitItem.addActionListener(e -> System.exit(0));
+
+        fileMenu.add(newItem);
+        fileMenu.add(openItem);
+        fileMenu.add(exitItem);
+        menuBar.add(fileMenu);
+
+        setJMenuBar(menuBar);
+
+        /* ================= MAIN PANEL ================= */
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BorderLayout());
+
+        /* ================= FORM PANEL ================= */
+        JPanel formPanel = new JPanel(new GridLayout(3, 3, 10, 10));
+
+        JLabel nameLabel = new JLabel("Name:");
+        JTextField nameField = new JTextField();
+        JButton submitBtn = new JButton("Submit");
+
+        JLabel userLabel = new JLabel("Username:");
+        JTextField userField = new JTextField();
+        JButton loginBtn = new JButton("Login");
+
+        JCheckBox termsCheck = new JCheckBox("Accept Terms");
+        JRadioButton maleRadio = new JRadioButton("Male");
+
+        String[] langs = {"Java", "Python", "C++"};
+        JComboBox<String> comboBox = new JComboBox<>(langs);
+
+        formPanel.add(nameLabel);
+        formPanel.add(nameField);
+        formPanel.add(submitBtn);
+
+        formPanel.add(userLabel);
+        formPanel.add(userField);
+        formPanel.add(loginBtn);
+
+        formPanel.add(termsCheck);
+        formPanel.add(maleRadio);
+        formPanel.add(comboBox);
+
+        /* ================= CALCULATOR PANEL ================= */
+        JPanel calcPanel = new JPanel(new GridLayout(4, 4, 5, 5));
+
+        String[] buttons = {
+            "7", "8", "9", "/",
+            "4", "5", "6", "*",
+            "1", "2", "3", "-",
+            "0", "+", ".", "="
+        };
+
+        for (String text : buttons) {
+            calcPanel.add(new JButton(text));
+        }
+
+        /* ================= CLICK ME BUTTON ================= */
+        JButton clickMeBtn = new JButton("Click Me");
+        clickMeBtn.addActionListener(e ->
+            JOptionPane.showMessageDialog(this, "Button Clicked!")
+        );
+
+        /* ================= ADD TO MAIN PANEL ================= */
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.add(clickMeBtn);
+
+        mainPanel.add(formPanel, BorderLayout.NORTH);
+        mainPanel.add(calcPanel, BorderLayout.CENTER);
+        mainPanel.add(bottomPanel, BorderLayout.SOUTH);
+
+        add(mainPanel);
+    }
+
+    public static void main(String[] args) {
+        new SwingExercise().setVisible(true);
+    }
+}
