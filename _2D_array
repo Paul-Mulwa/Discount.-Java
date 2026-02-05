@@ -1,0 +1,25 @@
+public class _2D_array{
+public static void main(String[]args){
+int sum=0;
+int elements;  
+double average;
+int[][] marks={
+    {75,80,90},
+    {65,70,85},
+    {88,92,81}
+};
+System.out.println("Matrix form:");
+System.out.println("-----------");
+for(int i=0;i<marks.length;i++){
+for(int j=0;j<marks[i].length;j++){
+System.out.print(marks[i][j] +",");
+}
+System.out.println();
+}
+ for(int j=0;j<marks[2].length;j++){
+sum+=marks[2][j];
+ }
+average=(double)sum/marks[2].length;
+System.out.println("AVG="+average);
+}
+}
