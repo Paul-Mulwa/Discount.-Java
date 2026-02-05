@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String[] args) {
+Scanner input=new Scanner(System.in);
+  int n;
+System.out.println("Enter n:");
+n =input.nextInt();
+if(n%2==0 && n>0){
+   System.out.println("n is even and positive number.");
+}
+ else if(n%2==0 && n<0){
+    System.out.println("n is even and negative number.");
+ }
+ else if(n%2!=0 && n<0){
+   System.out.println("n is odd and negative number");
+ }
+   else if(n%2!=0 && n >0){
+   System.out.println("n is odd and positive number");  
+   }
+    }
+}
