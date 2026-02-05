@@ -1,0 +1,30 @@
+public class Main{
+public static void main(String[]args){
+   int sum=0;
+   int sum2=0;
+   double average;
+int[][]marks={
+    {80,70,90},
+    {60,85,75},
+    {88,92,79}
+};
+System.out.println("     Matrix Form:");
+System.out.println("    ---------------");
+for(int i=0;i<marks.length;i++){
+  for(int j=0;j<marks[i].length;j++){
+System.out.print(marks[i][j] +" ");
+ sum+=marks[i][j];
+ 
+  }
+  System.out.println();
+}
+  for(int j=0;j<marks[0].length;j++){
+  sum2+=marks[0][j];
+  }
+ 
+int numbers= marks.length*marks[0].length;
+ average=(double)sum/numbers;
+System.out.println("AVG="+average);
+System.out.println("Sum of first row="+sum2); 
+}
+}
