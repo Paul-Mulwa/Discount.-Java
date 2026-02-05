@@ -1,0 +1,23 @@
+public class Data{
+public static void main(String[]args){
+int sum=0;
+int [][][] stocks={
+    {{50,30,20},{40,25,15}},
+    {{60,35,25},{55,28,18}}
+};
+for(int i=0;i<stocks.length;i++){
+for(int j=0;j<stocks[i].length;j++){
+for(int k=0;k<stocks[i][j].length;k++){
+System.out.print(stocks[i][j][k]+" ");
+}
+System.out.println();
+}
+}
+for(int i=0;i<stocks[1].length;i++){
+    for(int j=0;j<stocks[1][i].length;j++){
+sum+=stocks[1][i][j];
+}
+}
+System.out.println("Total="+sum);
+}
+}
