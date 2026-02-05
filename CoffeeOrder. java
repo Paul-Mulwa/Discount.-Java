@@ -1,0 +1,27 @@
+class CoffeeOrder{
+    String size;
+    double price;
+    
+ CoffeeOrder(String size, double price){
+     this.size=size;
+     this.price=price;
+ } 
+ void display(){
+System.out.println("Size:"+size);
+System.out.println("Price:"+price);
+ }
+}
+public class Main{
+public static void main(String []args){
+//create 2 CoffeOrder objects 
+CoffeeOrder coff1= new CoffeeOrder("small",250);
+CoffeeOrder coff2= new CoffeeOrder("large",400);
+System.out.println("..coff1..");
+System.out.println("Size:"+size);
+System.out.println("Price"+price);
+System.out.println("..coffe2..");
+System.out.println("Size:"+size);
+System.out.println("Price:"+price);
+
+}
+}
