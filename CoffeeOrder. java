@@ -16,12 +16,13 @@ public static void main(String []args){
 //create 2 CoffeOrder objects 
 CoffeeOrder coff1= new CoffeeOrder("small",250);
 CoffeeOrder coff2= new CoffeeOrder("large",400);
-System.out.println("..coff1..");
-System.out.println("Size:"+size);
-System.out.println("Price"+price);
-System.out.println("..coffe2..");
-System.out.println("Size:"+size);
-System.out.println("Price:"+price);
+System.out.println("..COFF1..");
+System.out.println("Size:"+coff1.size);
+System.out.println("Price:"+coff1.price);
+
+System.out.println("..COFF2..");
+System.out.println("Size:"+coff2.size);
+System.out.println("Price:"+coff2.price);
 
 }
 }
